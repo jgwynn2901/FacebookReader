@@ -1,0 +1,4 @@
+{
+  "connectionString" : "postgresql://postgres:great1@localhost:5432/SocialMediaArchive",
+  "jwtSecret": "shoemaker"
+}
