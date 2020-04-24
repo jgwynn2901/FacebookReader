@@ -13,6 +13,8 @@ app.get('/', async (req, res) => {
 });
 
 // define routes
-app.use('/api/users',require('./routes/users'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/posts', require('./routes/posts'));
+
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
