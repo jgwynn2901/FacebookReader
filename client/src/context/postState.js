@@ -11,7 +11,7 @@ import {
 const PostState = props => {
   const initialState = {
     posts: null,
-    user: { id: 5},
+    user: { id: 1},
     loading: false
   };
 

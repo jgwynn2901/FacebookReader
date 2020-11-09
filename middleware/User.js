@@ -1,15 +1,19 @@
 const db = require('../config/db');
 
 const getUsers = async (callback) => {
-  await db.query('SELECT * FROM "Facebook".users ORDER BY name ASC', (error, results) => {
+  console.log('getUsers running');
+  await db.query('SELECT * FROM "Facebook".users ORDER BY user_name ASC', (error, results) => {
     if (error) {
+      console.log('Error: ' + error);
       throw error;
     }
+    console.log('getUsers done');
     callback(results.rows);
   });
 }
 
 const findById = (id, callback) => {
+  console.log('user.findById: ' + id);
   db.query('SELECT * FROM "Facebook".users WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
